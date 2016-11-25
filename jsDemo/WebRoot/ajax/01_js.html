@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript</title>
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+  	<script type="text/javascript">
+  		var num = 100;
+  		var str ="我";
+  		var flag = true;
+  		//alert(flag);
+  	</script>
+  	
+  	<script type="text/javascript">
+  		function myadd_1(num1,num2){
+  			return (num1+num2);
+  		}
+  		
+  		//window.alert ("10+20=" + myadd_1(10,20));
+  	</script>
+
+	<script type="text/javascript">
+		var myadd_2 = new Function("num1","num2","return num1+num2");
+		//window.alert("100+200="+myadd_2(100,200))
+	</script>
+	
+	<script type="text/javascript">
+		var myadd_3 = function(num1,num2){
+			return num1+num2;
+		}
+		//window.alert("1000+2000="+myadd_3(1000,2000));
+	</script>
+
+
+	<script type="text/javascript">
+		var nowDate = new Date().toLocaleString();
+		document.write(nowDate+"<br/>");
+	</script>
+	
+	<script type="text/javascript">
+		for(var i=0;i<10;i++){
+			document.write(Math.floor(Math.random()*9)+1+"  ");
+		}
+		document.write("<br/>")
+	</script>
+	
+	<script type="text/javascript">
+		var array = new Array("语文","数学","英语",12,true);
+		for(var i=0;i<array.length;i++){
+			document.write(array[i]+" ");
+		}
+		document.write("<br/>")
+	</script>
+	
+	<script type="text/javascript">
+		function Student(id,name,salr){
+			this.id=id;
+			this.name=name;
+			this.salr=salr;
+		}
+		var stu = new Student(001,"李明",7000);
+		document.write("学生编号："+stu.id+"<br/>");
+		document.write("学生姓名："+stu.name+"<br/>");
+		document.write("学费"+stu.salr+"<br/>");
+	</script>
+	
+	<script type="text/javascript">
+		var date = new Date().toLocaleString();
+		window.status = date;
+	</script>
+	
+	<script type="text/javascript">
+		/* var uri = "www.baidu.com";
+		window.location.href=uri; */
+	</script>
+	
+	<script type="text/javascript">
+		//window.history.go(0);
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+		"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="codePackage" extends="struts-default">
+		<action name="codeAction" class="servlet.code.CodeAction" method="execute"></action>
+	</package>
+	
+	<package name="ProvinceAndCityAndAreaPackage" extends="json-default">
+		<global-results>
+			<result name="success" type="json"/>
+		</global-results>
+		<action name="findProvinceByCityAction" class="servlet.json.ProvinceAndCityAndAreaAction" method="findProvinceByCity">
+		</action>
+		<action name="findCityByAreaAction" class="servlet.json.ProvinceAndCityAndAreaAction" method="findCityByArea">
+		</action>
+	</package>
+	
+	<package name="ProvinceAndCity" extends="json-default" namespace="/">
+		<action name="findCity" class="jquery.action" method="find">
+			<result name="success" type="json"></result>
+		</action>
+	</package>
+	
+	<package name="Tax" extends="json-default" namespace="/">
+		<action name="taxAction" class="action.TaxAction">
+			<result type="json"></result>
+		</action>
+	</package>
+</struts>

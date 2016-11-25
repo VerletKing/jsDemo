@@ -1,0 +1,18 @@
+{
+  "ide": {
+    
+  },
+  "libs": [
+    "ecma5",
+    "browser",
+    "jquery"
+  ],
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "angular": {
+      
+    }
+  }
+}
